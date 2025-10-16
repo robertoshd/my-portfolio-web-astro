@@ -1,7 +1,6 @@
 import nodemailer from 'nodemailer';
 export { renderers } from '../../renderers.mjs';
 
-const prerender = false;
 async function POST({ request }) {
   const formData = await request.formData();
   const name = formData.get("name");
@@ -45,8 +44,7 @@ ${message}`,
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  POST,
-  prerender
+  POST
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;

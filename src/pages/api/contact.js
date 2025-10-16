@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-export const prerender = true;
+//export const prerender = false;
 
 export async function POST({ request }) {
   const formData = await request.formData();
