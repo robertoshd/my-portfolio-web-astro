@@ -1,22 +1,79 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+import "../styles/global.css";
+const { title, children } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  
+  <meta name="description" content="Ingeniero en Sistemas Computacionales con experiencia en desarrollo web on el conocimiento en la metodología ágil scrum">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09f"> <!-- Color al navegador en la parte de arriba -->
+
+  <meta property="og:title" content="Portafolio de un Ingeniero en Sistemas">
+  <meta property="og:description" content="Portafolio web de José con experiencia en desarrollo web con conocimiento en la metodología ágil scrum">
+  <meta property="og:image" content="/images/portafolio-preview-preview.jpeg">
+  <meta property="og:image:alt" content="Imagen del portafolio web de José">
+  <meta property="og:type" content="website">
+
+  <!-- <link rel="alternate" href="https://joseshportafolio.vercel.app/en" hreflang="en-GB"> -->
+
+  <!-- <link rel="canonical" href="https://joseshportafolio.vercel.app"> -->
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"> <!-- Icono en la pestaña de la página -->
+  
+  <title>{title}</title>
+</head>
+<body>
+
+  <div class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+  <Header />
+  <slot />
+  <Footer />
+  
+</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+
+
+  :root{
+    /* color-scheme: light dark; */
+  }
+
+  html {
+    font-family: 'Onest', sans-serif;
+    scroll-behavior: smooth;  
+  }
+
+  body {
+    /* background: #0f0f13; */
+    display: flex;
+    flex-direction: column;
+    height: 100vb;
+  }
+
+.project-card {
+  background-color: #1a1a2e;
+  border: 1px solid #2c2c40;
+  border-radius: 0.75rem; /* equivalent to rounded-xl in Tailwind */
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+}
+
+
 </style>

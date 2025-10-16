@@ -1,0 +1,160 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #0f0f13;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh; /* Para que no ocupe toda la pantalla */
+  overflow-y: auto; /* Scroll vertical si es mucho contenido */
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  position: relative;
+  color: #ccc;
+}
+
+.modal-main-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-gallery {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.modal-thumb {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  border: 2px solid transparent;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.modal-thumb.selected,
+.modal-thumb:hover {
+  opacity: 1;
+  border-color: #6c3de4;
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.modal-content strong {
+  color: #6c3de4;
+}
+
+.modal-content a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-right: 15px;
+  color: #6c3de4;
+  text-decoration: none;
+}
+
+.modal-content button {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #6c3de4;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.modal-content button:hover {
+  color: #502bb3;
+}
+
+/* === ANIMACIONES DEL MODAL === */
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes fadeInBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutBackdrop {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ANIMACIONES EN MODAL */
+
+.modal-backdrop {
+  animation: fadeInBackdrop 0.3s forwards;
+}
+
+.modal-backdrop.closing {
+  animation: fadeOutBackdrop 0.3s forwards;
+}
+
+.modal-content {
+  animation: fadeInZoom 0.3s forwards;
+}
+
+.modal-content.closing {
+  animation: fadeOutZoom 0.3s forwards;
+}
+
+
+

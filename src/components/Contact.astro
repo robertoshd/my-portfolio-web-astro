@@ -1,0 +1,106 @@
+<section class="contact text-white py-20 md:py-52 m-auto mx-6 sm:mx-6 md:mx-8 lg:mx-80" id="contact">
+  
+  <!-- Título principal -->
+  <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white undefined">
+    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" /></svg>
+    Contacto</h2>
+
+  <!-- Contenedor con flex para alinear texto + card -->
+  <div class="flex flex-col lg:flex-row gap-12 items-start justify-between">
+    
+    <!-- Texto a la izquierda -->
+    <div class="lg:w-1/2 text-justify">
+      <h3 class="text-2xl text-yellow-300 font-semibold mb-4"><span class="text-yellow-300">¿Tienes alguna duda o propuesta?</h3>
+      <p class="text-lg text-gray-300">
+        Completa el formulario y me pondré en contacto contigo lo antes posible. También puedes escribirme directamente a mi correo electrónico si lo prefieres,
+        <a href="mailto:joserobertoshdz1423@gmail.com?Subject=Consulta%20sobre%20trabajo">  
+          <span class="text-yellow-300">aquí</span>
+        </a>.
+      </p>
+
+      <img src="images/laptop.webp" 
+         alt="Foto de perfil de José Roberto" 
+         class="w-full h-full rounded-xl mt-10"
+    />
+    </div>
+
+    <!-- Formulario (card) a la derecha -->
+    <div class="contact-card w-full lg:w-3/5 bg-[#1a1a2e] p-8 rounded-lg border border-[#2c2c40] shadow-lg">
+
+      <form class="contact-form flex flex-col gap-4" id="contact-form"> <!--QUITAR POST PORQUE ASTRO NO ES BACKEND -->
+        <label for="name" class="text-left text-lg font-semibold text-[#bfbff2]">Nombre:</label>
+        <input type="text" id="name" name="name" required class="w-full p-3 bg-[#2e2e4d] text-[#d1d1d6] rounded-lg border-none shadow-inner focus:outline-none focus:ring-2 focus:ring-[#8a3ffc] transition-shadow duration-300" />
+
+        <label for="email" class="text-left text-lg font-semibold text-[#bfbff2]">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required class="w-full p-3 bg-[#2e2e4d] text-[#d1d1d6] rounded-lg border-none shadow-inner focus:outline-none focus:ring-2 focus:ring-[#8a3ffc] transition-shadow duration-300" />
+
+        <label for="message" class="text-left text-lg font-semibold text-[#bfbff2]">Mensaje:</label>
+        <textarea id="message" name="message" rows="5" required class="w-full p-3 bg-[#2e2e4d] text-[#d1d1d6] rounded-lg border-none shadow-inner focus:outline-none focus:ring-2 focus:ring-[#8a3ffc] transition-shadow duration-300"></textarea>
+
+        <button type="submit" class="w-full py-3 bg-[#8a3ffc] text-[#f0f0f5] font-semibold text-lg rounded-lg hover:bg-[#6e2bd8] transition duration-300">
+          Enviar mensaje
+        </button>
+      </form>
+
+      <div id="message-alert" class="hidden items-center p-4 mt-8 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div>
+          <span class="font-medium">¡Hubo error al enviar el correo!</span> Verifica que tus datos esten correctos
+        </div>
+      </div>
+
+      <div id="message-send" class="hidden items-center p-4 mt-8 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="sr-only">Info</span>
+        <div>
+          <span class="font-medium">¡Correo enviado con exito!</span> Gracias por ponerte en contacto
+      </div>
+      
+    </div>
+  </div>
+
+
+</section>
+
+<script lang="js">
+  document.addEventListener('DOMContentLoaded', () => { // Agrega escucha evento del document con DOM
+    
+    const form = document.getElementById("contact-form"); // Constante que contiene lo que el usuario ingreso en el formulario con el id 'contact-form'
+    const messageSend = document.getElementById("message-send");
+    const messageAlert = document.getElementById("message-alert");
+    
+    if (!form) return; // El formulario es diferente de vacío que retorne
+
+    form.addEventListener('submit', async (e) => { // Agrega escucha evento a través de un submit (botón) de manera asincrona
+      e.preventDefault();
+
+      const formData = new FormData(form); // Constante con los datos de form con la función FormData()
+
+      try {
+        const res = await fetch('/api/contact', { // Requiere una petición al endpoint en js
+          method: 'POST',
+          body: formData,
+        });
+
+        if (res.ok) { // Si la respuesta del servidor es 400
+          messageSend.style.display = "flex"; // Mostrar mensaje enviado
+          form.reset(); // Resetea los campos del formulario
+        } else {
+          const data = await res.json(); // Muestra un error en el formulario
+          alert('Error: ' + (data.error || 'No se pudo enviar el mensaje'));
+          messageAlert.style.display = "flex";
+        }
+
+      } catch (error) {
+        alert('Error al enviar el mensaje');
+        console.error(error);
+      }
+  
+    });
+  });
+</script>

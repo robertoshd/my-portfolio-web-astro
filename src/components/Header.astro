@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+---
+
+<header id="navbar" class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+
+    <!-- Navegación Desktop -->
+    <nav class="bg-slate-700 bg-opacity-40 backdrop-blur-sm shadow-lg flex px-10 gap-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
+      <a href="#hero" class="nav-link px-2 py-2 hover:text-purple-400 font-semibold transition duration-200">Sobre mí</a>
+      <a href="#projects" class="nav-link px-2 py-2 hover:text-purple-400 font-semibold transition duration-200">Proyectos</a>
+      <a href="#contact" class="nav-link px-2 py-2 hover:text-purple-400 font-semibold transition duration-200">Contacto</a>
+    </nav>
+
+</header>
+
+<script lang="js">
+// Obtener todos los enlaces de navegación con la clase .nav-link
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Función para detectar la sección visible
+function setActiveLink() {
+  let scrollPosition = window.scrollY;
+  let windowHeight = window.innerHeight;
+
+  // Iterar a través de cada enlace y su sección correspondiente
+  navLinks.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href')); // Obtener la sección vinculada
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    // Verificar si la sección está parcialmente visible (pudiendo estar un poco más arriba o abajo)
+    if (scrollPosition >= sectionTop - windowHeight / 3 && scrollPosition < sectionTop + sectionHeight - windowHeight / 3) {
+      link.classList.add('text-purple-400'); // Añadir la clase 'text-purple-400' al enlace
+      //link.classList.remove('text-gray-600'); // Eliminar el color por defecto
+    } else {
+      link.classList.remove('text-purple-400'); // Remover la clase 'text-purple-400' del enlace
+      //link.classList.add('text-gray-600'); // Volver al color por defecto
+    }
+  });
+}
+
+// Llamar a la función al hacer scroll
+window.addEventListener('scroll', setActiveLink);
+
+// Llamar a la función cuando se cargue la página, en caso de que se cargue en una sección ya visible
+document.addEventListener('DOMContentLoaded', setActiveLink);
+
+</script>
