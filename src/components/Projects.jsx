@@ -42,7 +42,7 @@ export default function ProjectGalleryReact() {
                 {project.technologies.map((tech, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-x-2 bg-gray-800 border-2 border-cyan-800 rounded-full  px-2 py-1 text-xs shadow-md"
+                  className="flex items-center gap-x-1 text-white bg-gray-800 border-2 border-cyan-800 rounded-full  px-2 py-1 text-xs shadow-md"
                 >
                   <img
                     src={tech.icon}
@@ -58,7 +58,7 @@ export default function ProjectGalleryReact() {
               <div className="flex gap-4 mt-4">
                 <a
                   href={project.link}
-                  className="w-1/2 project-btn bg-[#8a3ffc] text-white font-bold py-2 px-4 rounded-lg text-center transition duration-200 hover:bg-[#6e2bd8] no-underline cursor-pointer"
+                  className="w-1/2 project-btn bg-purple-600 text-white font-bold py-2 px-4 rounded-lg text-center transition duration-200 hover:bg-[#6e2bd8] no-underline cursor-pointer"
                   onClick={() => handleCardClick(project)}
                 >
                   <span className="flex items-center justify-evenly">
