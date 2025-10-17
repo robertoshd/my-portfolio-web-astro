@@ -15,7 +15,7 @@ export default function ProjectGalleryReact() {
 
   return (
     <section className="projects py-20 md:py-52 mt-auto mx-6 sm:mx-6 md:mx-8 lg:mx-80" id="projects">
-      <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white undefined">
+      <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white">
         <svg class="size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></svg>
         Proyectos
       </h2>
