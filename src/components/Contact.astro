@@ -12,53 +12,67 @@
     <div class="lg:w-1/2 text-justify">
       <h3 class="text-2xl text-yellow-300 font-semibold mb-4"><span class="text-yellow-300">¿Tienes alguna duda o propuesta?</h3>
       <p class="text-lg text-gray-300">
-        Completa el formulario y me pondré en contacto contigo lo antes posible. También puedes escribirme directamente a mi correo electrónico si lo prefieres,
-        <a href="mailto:joserobertoshdz1423@gmail.com?Subject=Consulta%20sobre%20trabajo">  
-          <span class="text-yellow-300">aquí</span>
-        </a>.
+        Escribirme directamente a mi correo electrónico y me pondré en contacto contigo lo antes posible. También puedes escribirme directamente a mi correo electrónico si lo prefieres, aquí:
       </p>
 
-      <img src="images/laptop.webp" 
-         alt="Foto de perfil de José Roberto" 
-         class="w-full h-full rounded-xl mt-10"
-    />
+      <!-- Email -->
+      <a href="mailto:joserobertoshdz1423@gmail.com?Subject=Consulta%20sobre%20trabajo" 
+         class="flex items-center justify-center mt-10 gap-2 bg-yellow-500 transition-all duration-300 transform hover:-translate-y-1 rounded-full px-4 py-2 text-white font-semibold shadow-md">
+        <img src="https://img.icons8.com/ios-glyphs/24/ffffff/new-post.png" alt="Email" />
+        Contáctame
+      </a>
     </div>
 
     <!-- Formulario (card) a la derecha -->
     <div class="contact-card w-full lg:w-3/5 bg-[#1a1a2e] p-8 rounded-lg border border-[#2c2c40] shadow-lg">
 
-      <form class="contact-form flex flex-col gap-4" id="contact-form"> <!--QUITAR POST PORQUE ASTRO NO ES BACKEND -->
-        <label for="name" class="text-left text-lg font-semibold text-[#bfbff2]">Nombre:</label>
-        <input type="text" id="name" name="name" required class="w-full p-3 bg-[#2e2e4d] text-[#d1d1d6] rounded-lg border-none shadow-inner focus:outline-none focus:ring-2 focus:ring-[#8a3ffc] transition-shadow duration-300" />
+      <h2 class="flex items-center mb-6 text-xl font-semibold gap-x-3 text-black/80 dark:text-white undefined">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-prompt"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7l5 5l-5 5" /><path d="M13 17l6 0" /></svg>
+      Tecnologías</h2>
 
-        <label for="email" class="text-left text-lg font-semibold text-[#bfbff2]">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required class="w-full p-3 bg-[#2e2e4d] text-[#d1d1d6] rounded-lg border-none shadow-inner focus:outline-none focus:ring-2 focus:ring-[#8a3ffc] transition-shadow duration-300" />
+      <div class="flex items-center gap-6 flex-wrap justify-center md:justify-start">
 
-        <label for="message" class="text-left text-lg font-semibold text-[#bfbff2]">Mensaje:</label>
-        <textarea id="message" name="message" rows="5" required class="w-full p-3 bg-[#2e2e4d] text-[#d1d1d6] rounded-lg border-none shadow-inner focus:outline-none focus:ring-2 focus:ring-[#8a3ffc] transition-shadow duration-300"></textarea>
-
-        <button type="submit" class="w-full py-3 bg-[#8a3ffc] text-[#f0f0f5] font-semibold text-lg rounded-lg hover:bg-[#6e2bd8] transition duration-300">
-          Enviar mensaje
-        </button>
-      </form>
-
-      <div id="message-alert" class="hidden items-center p-4 mt-8 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
-        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-        </svg>
-        <span class="sr-only">Info</span>
-        <div>
-          <span class="font-medium">¡Hubo error al enviar el correo!</span> Verifica que tus datos esten correctos
+        <p class="text-purple-400  font-semibold">Frontend</p>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" />
+          <span>HTML</span>
+        </div>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" />
+          <span>CSS</span>
+        </div>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://logo.svgcdn.com/l/astro-icon.svg" alt="Astro" />
+          <span>Astro</span>
+        </div>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
+          <span>JavaScript</span>
         </div>
       </div>
 
-      <div id="message-send" class="hidden items-center p-4 mt-8 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-        </svg>
-        <span class="sr-only">Info</span>
-        <div>
-          <span class="font-medium">¡Correo enviado con exito!</span> Gracias por ponerte en contacto
+      <div class="flex items-center gap-6 flex-wrap py-6 justify-center md:justify-start">
+        <p class="text-purple-400 font-semibold">Backend</p>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" />
+          <span>PHP</span>
+        </div>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
+          <span>Python</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 flex-wrap justify-center md:justify-start">
+        <p class="text-purple-400 font-semibold">Herramientas</p>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2 border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://cdn.simpleicons.org/git" alt="Git" />
+          <span>Git</span>
+        </div>
+        <div class="flex items-center gap-x-2 bg-gray-900 border-2  border-gray-400 rounded-full px-4 py-2 text-sm text-white font-medium shadow-md">
+          <img class="w-4 h-4" src="https://img.icons8.com/material-rounded/24/ffffff/github.png" alt="Git" />
+          <span>GitHub</span>
+        </div>
       </div>
       
     </div>
