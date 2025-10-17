@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal.jsx";
 import { projects } from '../data/projectsData.js'; // Ruta de los datos de cada proyecto
+import "../styles/global.css";
 
 export default function ProjectGalleryReact() {
   const [selectedProject, setSelectedProject] = useState(null);

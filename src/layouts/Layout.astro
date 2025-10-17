@@ -43,10 +43,6 @@ import Footer from '../components/Footer.astro';
 <style is:global>
   @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
-  :root{
-    /* color-scheme: light dark; */
-  }
-
   html {
     font-family: 'Onest', sans-serif;
     scroll-behavior: smooth;  
@@ -59,19 +55,19 @@ import Footer from '../components/Footer.astro';
     height: 100vb;
   }
 
-.project-card {
-  background-color: #1a1a2e;
-  border: 1px solid #2c2c40;
-  border-radius: 0.75rem; /* equivalent to rounded-xl in Tailwind */
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .project-card {
+    background-color: #1a1a2e;
+    border: 1px solid #2c2c40;
+    border-radius: 0.75rem; /* equivalent to rounded-xl in Tailwind */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-.project-card:hover {
-  transform: scale(1.05); /* Aumenta el tamaño de la card */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
-}
+  .project-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la card */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+  }
 
 
 </style>
