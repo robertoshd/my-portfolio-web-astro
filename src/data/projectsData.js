@@ -24,28 +24,6 @@ export const projects = [
   },
 
   {
-    title: "Landing Pages Veterinaria",
-    date: "Agosto 2025",
-    description: "Desarrollo de una landing pages responsiva, con descripción y servicios que ofrece.",
-    problem: "El cliente quería destacar los servicios veterinarios en su localidad.",
-    solution: "Diseñamos una landing que destaca cada servicio con testimonios reales.",
-    design: "Profesional y amigable para los amantes de mascotas.",
-    results: "Incremento del 50% en citas reservadas online.",
-    image: "images/landing-veterinaria-preview1.webp",
-    images: [
-      "images/landing-veterinaria-1.png",
-      "images/landing-veterinaria-2.png",
-      "images/landing-veterinaria-3.png",
-      "images/landing-veterinaria-4.png"
-    ],
-    technologies: [
-      { name: 'HTML', icon: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000' },
-      { name: 'CSS', icon: 'https://img.icons8.com/?size=100&id=21278&format=png&color=000000' },
-    ],
-    url: "https://github.com/robertoshd/landing-pages-veterinaria-astro"
-  },
-
-  {
     title: "Plantilla Menu Digital",
     date: "Agosto 2025",
     description: "Desarrollo de un menú digital para negocios que se dedican a la venta de bebidas frías.",
