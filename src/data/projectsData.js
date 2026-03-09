@@ -43,5 +43,25 @@ export const projects = [
       { name: 'JavaScript', icon: 'https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000' },
     ],
     url: "https://github.com/robertoshd/menu-digital-plantilla-frapes"
+  },
+
+  {
+    title: "Generador de Códigos QR",
+    date: "Diciembre 2025",
+    description: "Desarrollo de un Generador de Códigos QR con un enfoque sencillo y directo.",
+    problem: "Complejidad innecesaria para los usuarios que solo buscan algo rápido, como otros generadores  ",
+    solution: "Desarrollo de una herramienta práctica, rapida y fácil de usar, con un enfoque sencillo y directo.",
+    design: "Diseño moderno y fácil de navegar.",
+    results: "No hay resultados, ya que es un proyecto de prática personal.",
+    image: "images/generador-qr-mockup.webp",
+    images: [
+      "images/generador-qr-1.webp"
+    ],
+    technologies: [
+      { name: 'Vue.js', icon: 'https://img.icons8.com/?size=100&id=rY6agKizO9eb&format=png&color=000000' },
+      { name: 'Tailwindcss', icon: 'https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000' },
+      { name: 'JavaScript', icon: 'https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000' },
+    ],
+    url: "https://github.com/robertoshd/menu-digital-plantilla-frapes"
   }
 ];
