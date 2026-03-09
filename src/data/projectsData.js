@@ -11,10 +11,10 @@ export const projects = [
     results: "Incremento del 40% en consultas y mejor posicionamiento SEO.",
     image: "images/landing-codemadi-preview1.webp",
     images: [
-      "images/landing-pages-1.png",
-      "images/landing-pages-2.png",
-      "images/landing-pages-3.png",
-      "images/landing-pages-4.png"
+      "images/landing-pages-1.webp",
+      "images/landing-pages-2.webp",
+      "images/landing-pages-3.webp",
+      "images/landing-pages-4.webp"
     ],
     technologies: [
       { name: 'Astro', icon: 'https://logo.svgcdn.com/l/astro-icon.svg'},
@@ -33,9 +33,9 @@ export const projects = [
     results: "Aumento del 30% en pedidos durante el primer mes.",
     image: "images/plantilla-frapes-preview1.webp",
     images: [
-      "images/menu-frapes-1.png",
-      "images/menu-frapes-2.png",
-      "images/menu-frapes-3.png"
+      "images/menu-frapes-1.webp",
+      "images/menu-frapes-2.webp",
+      "images/menu-frapes-3.webp"
     ],
     technologies: [
       { name: 'HTML', icon: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000' },
